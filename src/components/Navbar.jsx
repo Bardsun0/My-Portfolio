@@ -30,7 +30,7 @@ const Navbar = () => {
             {[
               { name: "Home", id: "header" },
               { name: "Skills", id: "skills" },
-              { name: "Works", id: "works" },
+              { name: "Projects", id: "projects" },
               { name: "Contact", id: "contact" },
             ].map((item, index) => (
               <motion.button

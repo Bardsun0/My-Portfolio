@@ -21,10 +21,26 @@ const skillsData = [
     logo: "/tailwind-logo.png",
     url: "https://tailwindcss.com/",
   },
-  { name: "React", logo: "/react-logo.png", url: "https://reactjs.org/" },
-  { name: "Redux", logo: "/redux-logo.png", url: "https://redux.js.org/" },
-  { name: "Figma", logo: "/figma-logo.png", url: "https://www.figma.com/" },
-  { name: "Node.js", logo: "/nodejs-logo.png", url: "https://nodejs.org/" },
+  {
+    name: "React",
+    logo: "/react-logo.png",
+    url: "https://reactjs.org/",
+  },
+  {
+    name: "Redux",
+    logo: "/redux-logo.png",
+    url: "https://redux.js.org/",
+  },
+  {
+    name: "Figma",
+    logo: "/figma-logo.png",
+    url: "https://www.figma.com/",
+  },
+  {
+    name: "Node.js",
+    logo: "/nodejs-logo.png",
+    url: "https://nodejs.org/",
+  },
 ];
 
 const Skills = () => {
