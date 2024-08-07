@@ -4,10 +4,28 @@ export default {
   theme: {
     extend: {
       colors: {
-        primary: "#21243D", // Text color 
-        accent: "#EA1D5D", // Pink for hover effect 
+        primary: "#21243D",
+        accent: "#EA1D5D",
+        "accent-dark": "#D11850",
+        "custom-darkpink": "#AF0C48",
+      },
+      fontFamily: {
+        inter: ["Inter", "sans-serif"],
+        playfair: ["Playfair Display", "sans-serif"],
+      },
+      textShadow: {
+        custom: "2px 2px 4px rgba(0, 0, 0, 0.5)",
       },
     },
   },
-  plugins: [],
+  plugins: [
+    function ({ addUtilities }) {
+      const newUtilities = {
+        ".text-shadow-custom": {
+          textShadow: "2px 2px 4px rgba(0, 0, 0, 0.5)",
+        },
+      };
+      addUtilities(newUtilities);
+    },
+  ],
 };
