@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 const Navbar = () => {
   return (
     <motion.nav
-      className="w-full h-20 bg-white"
+      className="w-full h-20"
       initial={{ opacity: 0, y: -50 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.5 }}
@@ -20,7 +20,7 @@ const Navbar = () => {
             />
           </div>
           <div className="flex items-center space-x-8 font-medium">
-            {["Home", "Works", "Blog", "Contact"].map((item, index) => (
+            {["Home", "Skills", "Works", "Contact"].map((item, index) => (
               <motion.a
                 key={item}
                 href="#"
