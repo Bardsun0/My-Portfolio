@@ -1,40 +1,33 @@
 const Navbar = () => {
   return (
-    <nav className="w-full h-16 md:h-20 bg-white shadow-lg">
+    <nav className="w-full h-20 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-full">
         <div className="flex justify-between items-center h-full">
           <div className="flex items-center">
-            <img
-              src="/path-to-your-logo.png"
-              alt="Logo"
-              className="h-8 w-8 mr-2"
-            />
-            <span className="font-semibold text-gray-500 text-lg">
-              brand.co
-            </span>
+            <img src="/logo.png" alt="Logo" className="h-[80px] w-[140px]" />
           </div>
-          <div className="hidden md:flex items-center space-x-4">
+          <div className="flex items-center space-x-8 font-medium">
             <a
               href="#"
-              className="text-gray-500 hover:text-pink-500 transition duration-300"
+              className="text-primary hover:text-accent transition duration-300"
             >
               Home
             </a>
             <a
               href="#"
-              className="text-gray-500 hover:text-pink-500 transition duration-300"
+              className="text-primary hover:text-accent transition duration-300"
             >
               Works
             </a>
             <a
               href="#"
-              className="text-gray-500 hover:text-pink-500 transition duration-300"
+              className="text-primary hover:text-accent transition duration-300"
             >
               Blog
             </a>
             <a
               href="#"
-              className="text-gray-500 hover:text-pink-500 transition duration-300"
+              className="text-primary hover:text-accent transition duration-300"
             >
               Contact
             </a>
