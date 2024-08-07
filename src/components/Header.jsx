@@ -1,9 +1,22 @@
+import { motion, useScroll, useTransform } from "framer-motion";
+
 const Header = () => {
+  const { scrollY } = useScroll();
+  const y = useTransform(scrollY, [0, 500], [0, -150]);
+
   return (
     <header className="w-full font-inter text-shadow-custom forStyle">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+      <motion.div
+        className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 relative"
+        style={{ y }}
+      >
         <div className="flex flex-col md:flex-row items-center justify-between">
-          <div className="w-full md:w-1/2 mb-12 md:mb-0">
+          <motion.div
+            className="w-full md:w-1/2 mb-12 md:mb-0"
+            initial={{ opacity: 0, x: -50 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.9, delay: 0.2 }}
+          >
             <p className="text-[36px] font-medium mb-10 text-primary">
               Hi! 👋 <br /> I'm Ozan. I'm a frontend developer. I can craft
               solid and scalable frontend products. <br /> Let's meet!
@@ -51,16 +64,21 @@ const Header = () => {
                 </a>
               </p>
             </div>
-          </div>
-          <div className="w-full md:w-1/2 flex justify-end">
+          </motion.div>
+          <motion.div
+            className="w-full md:w-1/2 flex justify-end"
+            initial={{ opacity: 0, scale: 0.8 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.9, delay: 0.4 }}
+          >
             <img
               src="/profilephoto.png"
               alt="ProfilePhoto"
               className="w-3/4 h-auto object-cover rounded-full"
             />
-          </div>
+          </motion.div>
         </div>
-      </div>
+      </motion.div>
     </header>
   );
 };
