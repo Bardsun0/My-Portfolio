@@ -37,7 +37,7 @@ const Navbar = () => {
                 key={item.name}
                 onClick={() => scrollToSection(item.id)}
                 className="text-primary hover:text-accent transition duration-300"
-                whileHover={{ scale: 1.1 }}
+                whileHover={{ scale: 1.4 }}
                 whileTap={{ scale: 0.9 }}
                 initial={{ opacity: 0, y: -20 }}
                 animate={{ opacity: 1, y: 0 }}
