@@ -29,7 +29,7 @@ const skillsData = [
 
 const Skills = () => {
   return (
-    <section className="w-full py-20 font-playfair">
+    <section id="skills" className="w-full py-20 font-playfair">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <h2 className="text-5xl font-bold text-center mb-16 text-primary">
           Skills

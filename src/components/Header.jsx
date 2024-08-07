@@ -5,7 +5,10 @@ const Header = () => {
   const y = useTransform(scrollY, [0, 500], [0, -150]);
 
   return (
-    <header className="w-full font-inter text-shadow-custom forStyle">
+    <header
+      id="header"
+      className="w-full font-inter text-shadow-custom forStyle overflow-hidden pt-20"
+    >
       <motion.div
         className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 relative"
         style={{ y }}

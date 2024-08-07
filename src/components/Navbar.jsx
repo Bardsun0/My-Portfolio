@@ -1,9 +1,16 @@
 import { motion } from "framer-motion";
 
 const Navbar = () => {
+  const scrollToSection = (sectionId) => {
+    const section = document.getElementById(sectionId);
+    if (section) {
+      section.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
   return (
     <motion.nav
-      className="w-full h-20"
+      className="w-full h-20 fixed top-0 z-50 bg-white"
       initial={{ opacity: 0, y: -50 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.5 }}
@@ -20,19 +27,24 @@ const Navbar = () => {
             />
           </div>
           <div className="flex items-center space-x-8 font-medium">
-            {["Home", "Skills", "Works", "Contact"].map((item, index) => (
-              <motion.a
-                key={item}
-                href="#"
+            {[
+              { name: "Home", id: "header" },
+              { name: "Skills", id: "skills" },
+              { name: "Works", id: "works" },
+              { name: "Contact", id: "contact" },
+            ].map((item, index) => (
+              <motion.button
+                key={item.name}
+                onClick={() => scrollToSection(item.id)}
                 className="text-primary hover:text-accent transition duration-300"
-                whileHover={{ scale: 1.4 }}
+                whileHover={{ scale: 1.1 }}
                 whileTap={{ scale: 0.9 }}
                 initial={{ opacity: 0, y: -20 }}
                 animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.2, delay: index * 0.1 }}
+                transition={{ duration: 0.5, delay: index * 0.1 }}
               >
-                {item}
-              </motion.a>
+                {item.name}
+              </motion.button>
             ))}
           </div>
         </div>
