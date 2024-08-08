@@ -52,27 +52,27 @@ const Projects = () => {
           ))}
         </div>
         <div className="flex justify-center mt-12">
-          <motion.button
-            className="bg-accent text-white px-6 py-3 rounded-full font-medium"
-            whileHover={{ scale: 1.05 }}
+          <motion.a
+            href="https://github.com/Bardsun0"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="bg-accent text-white px-6 py-3 rounded-full font-medium flex items-center"
+            whileHover={{ scale: 1.1 }}
             whileTap={{ scale: 0.95 }}
           >
-            More works
-          </motion.button>
+            <img src="/github.png" alt="GitHub" className="w-5 h-5 mr-2" />
+            View on GitHub
+          </motion.a>
           <motion.a
-            href="https://dribbble.com"
+            href="https://www.linkedin.com/in/ozan-g%C3%BCne%C5%9F-500097312/"
             target="_blank"
             rel="noopener noreferrer"
             className="ml-4 bg-white text-accent border border-accent px-6 py-3 rounded-full font-medium flex items-center"
-            whileHover={{ scale: 1.05 }}
+            whileHover={{ scale: 1.1 }}
             whileTap={{ scale: 0.95 }}
           >
-            <img
-              src="/dribbble-icon.png"
-              alt="Dribbble"
-              className="w-5 h-5 mr-2"
-            />
-            View on Dribbble
+            <img src="/LinkedIn.png" alt="LinkedIn" className="w-5 h-5 mr-2" />
+            View on LinkedIn
           </motion.a>
         </div>
       </div>
