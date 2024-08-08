@@ -7,7 +7,7 @@ const Header = () => {
   return (
     <header
       id="header"
-      className="w-full font-inter text-shadow-custom forStyle overflow-hidden pt-20"
+      className="w-full font-inter text-shadow-custom overflow-hidden pt-20"
     >
       <motion.div
         className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 relative"
