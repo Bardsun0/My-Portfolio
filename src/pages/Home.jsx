@@ -4,6 +4,7 @@ const Navbar = lazy(() => import("../components/Navbar"));
 const Header = lazy(() => import("../components/Header"));
 const Skills = lazy(() => import("../components/Skills"));
 const Projects = lazy(() => import("../components/Projects"));
+const Footer = lazy(() => import("../components/Footer"));
 
 const Home = () => {
   return (
@@ -12,6 +13,7 @@ const Home = () => {
       <Header />
       <Skills />
       <Projects />
+      <Footer />
     </Suspense>
   );
 };

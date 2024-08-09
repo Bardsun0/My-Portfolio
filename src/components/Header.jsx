@@ -1,4 +1,5 @@
 import { motion, useScroll, useTransform } from "framer-motion";
+import SocialIcons from "./SocialIcons";
 
 const Header = () => {
   const { scrollY } = useScroll();
@@ -24,30 +25,7 @@ const Header = () => {
               Hi! 👋 <br /> I'm Ozan. I'm a frontend developer. I can craft
               solid and scalable frontend products. <br /> Let's meet!
             </p>
-            <div className="flex items-center space-x-4 mt-6">
-              <a
-                href="https://www.linkedin.com/in/ozan-g%C3%BCne%C5%9F-500097312/"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <img
-                  src="/LinkedIn.png"
-                  alt="LinkedIn"
-                  className="w-[31px] h-[33.95px]"
-                />
-              </a>
-              <a
-                href="https://github.com/Bardsun0"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <img
-                  src="/github.png"
-                  alt="GitHub"
-                  className="w-[34px] h-[36.14px]"
-                />
-              </a>
-            </div>
+            <SocialIcons />
             <div className="text-xl leading-relaxed mt-4 font-normal text-primary">
               <p>
                 Currently{" "}
