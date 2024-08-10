@@ -5,7 +5,7 @@ export default {
     extend: {
       colors: {
         primary: "#21243D",
-        accent: "#EA1D5D",
+        accent: "#0bc4d1",
         "accent-dark": "#D11850",
         "custom-darkpink": "#AF0C48",
       },

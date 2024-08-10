@@ -2,24 +2,28 @@ import { motion } from "framer-motion";
 
 const projectsData = [
   {
-    title: "Mobile App Design",
-    image: "/project1.jpg",
-    description: "A sleek mobile app interface design",
-  },
-  {
-    title: "Classic Web App",
-    image: "/project2.jpg",
-    description: "Clean and modern web application design",
-  },
-  {
     title: "E-commerce Platform",
-    image: "/project3.jpg",
+    image: "/project1.png",
     description: "User-friendly online shopping experience",
+    url: "",
   },
   {
-    title: "Portfolio Website",
-    image: "/project4.jpg",
-    description: "Showcasing creative work with style",
+    title: "Pizza Order Project",
+    image: "/project2.png",
+    description: "Clean and modern pizza order application design",
+    url: "https://bardsun-pizza-challenge.vercel.app/",
+  },
+  {
+    title: "Portfolio Website 2",
+    image: "/project3.png",
+    description: "Another portfolio design, showcasing creative work with style ",
+    url: "https://ozangunes.vercel.app/",
+  },
+  {
+    title: "React Grid",
+    image: "/project4.png",
+    description: "Problem solving with grid",
+    url: "",
   },
 ];
 
@@ -30,27 +34,54 @@ const Projects = () => {
         <h2 className="text-5xl font-bold text-center mb-16 text-primary">
           Check out my Recent Projects 🎉
         </h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <motion.div
+          className="grid grid-cols-1 md:grid-cols-2 gap-8"
+          initial="hidden"
+          animate="visible"
+          variants={{
+            hidden: { opacity: 0 },
+            visible: {
+              opacity: 1,
+              transition: {
+                staggerChildren: 0.2,
+              },
+            },
+          }}
+        >
           {projectsData.map((project, index) => (
             <motion.div
               key={index}
               className="bg-white rounded-lg shadow-md overflow-hidden"
-              initial={{ opacity: 0, y: 50 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: index * 0.1 }}
+              variants={{
+                hidden: { opacity: 0, y: 50 },
+                visible: { opacity: 1, y: 0 },
+              }}
+              whileHover={{ scale: 1.05 }}
+              transition={{ duration: 0.3 }}
             >
-              <img
-                src={project.image}
-                alt={project.title}
-                className="w-full h-64 object-cover"
-              />
-              <div className="p-6">
-                <h3 className="text-xl font-semibold mb-2">{project.title}</h3>
-                <p>{project.description}</p>
-              </div>
+              <a
+                href={project.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="block"
+              >
+                <div className="relative overflow-hidden">
+                  <img
+                    src={project.image}
+                    alt={project.title}
+                    className="w-full h-64"
+                  />
+                </div>
+                <div className="p-6">
+                  <h3 className="text-xl font-semibold mb-2">
+                    {project.title}
+                  </h3>
+                  <p>{project.description}</p>
+                </div>
+              </a>
             </motion.div>
           ))}
-        </div>
+        </motion.div>
         <div className="flex justify-center mt-12">
           <motion.a
             href="https://github.com/Bardsun0"

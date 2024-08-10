@@ -31,7 +31,10 @@ const Footer = () => {
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5 }}
       >
-        <div className="max-w-7xl h-36 mx-auto bg-accent -mt-16 flex flex-col justify-center items-center">
+        <div
+          id="footerGradient"
+          className="max-w-7xl h-36 mx-auto -mt-16 flex flex-col justify-center items-center"
+        >
           <motion.h2
             className="text-2xl font-bold text-center mb-4"
             initial={{ opacity: 0, y: -20 }}
