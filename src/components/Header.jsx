@@ -22,8 +22,8 @@ const Header = () => {
             transition={{ duration: 0.9, delay: 0.2 }}
           >
             <p className="text-[36px] font-medium mb-10 text-primary">
-              Hi! 👋 <br /> I'm Ozan. I'm a frontend developer. I can craft
-              solid and scalable frontend products. <br /> Let's meet!
+              Hi! 👋 <br /> I`m Ozan. I`m a frontend developer. I can craft
+              solid and scalable frontend products. <br /> Let`s meet!
             </p>
             <SocialIcons />
             <div className="text-xl leading-relaxed mt-4 font-normal text-primary">
