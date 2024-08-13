@@ -1,6 +1,9 @@
 import { motion } from "framer-motion";
+import { useSelector } from "react-redux";
 
 const Navbar = () => {
+  const navItems = useSelector((state) => state.navbar.navItems);
+
   const scrollToSection = (sectionId) => {
     const section = document.getElementById(sectionId);
     if (section) {
@@ -27,12 +30,7 @@ const Navbar = () => {
             />
           </div>
           <div className="flex items-center space-x-8 font-medium">
-            {[
-              { name: "Home", id: "header" },
-              { name: "Skills", id: "skills" },
-              { name: "Projects", id: "projects" },
-              { name: "Contact", id: "contact" },
-            ].map((item, index) => (
+            {navItems.map((item, index) => (
               <motion.button
                 key={item.name}
                 onClick={() => scrollToSection(item.id)}

@@ -1,9 +1,11 @@
+import { useSelector } from "react-redux";
 import { motion, useAnimation } from "framer-motion";
 import { useState } from "react";
 import SocialIcons from "./SocialIcons";
 import Confetti from "./Confetti";
 
 const Footer = () => {
+  const { callToAction, navItems } = useSelector((state) => state.footer);
   const [isExploding, setIsExploding] = useState(false);
   const controls = useAnimation();
 
@@ -41,7 +43,7 @@ const Footer = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.2 }}
           >
-            Let`s create something great together!
+            {callToAction}
           </motion.h2>
           <motion.div
             className="flex justify-center relative"
@@ -89,12 +91,7 @@ const Footer = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.2 }}
           >
-            {[
-              { name: "Home", id: "header" },
-              { name: "Skills", id: "skills" },
-              { name: "Projects", id: "projects" },
-              { name: "Contact", id: "contact" },
-            ].map((item, index) => (
+            {navItems.map((item, index) => (
               <motion.button
                 key={item.name}
                 onClick={() => scrollToSection(item.id)}

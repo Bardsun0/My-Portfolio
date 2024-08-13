@@ -1,49 +1,9 @@
 import { motion } from "framer-motion";
-
-const skillsData = [
-  {
-    name: "JavaScript",
-    logo: "/js-logo.png",
-    url: "https://developer.mozilla.org/en-US/docs/Web/JavaScript",
-  },
-  {
-    name: "HTML",
-    logo: "/html-logo.png",
-    url: "https://developer.mozilla.org/en-US/docs/Web/HTML",
-  },
-  {
-    name: "CSS",
-    logo: "/css-logo.png",
-    url: "https://developer.mozilla.org/en-US/docs/Web/CSS",
-  },
-  {
-    name: "Tailwind CSS",
-    logo: "/tailwind-logo.png",
-    url: "https://tailwindcss.com/",
-  },
-  {
-    name: "React",
-    logo: "/react-logo.png",
-    url: "https://reactjs.org/",
-  },
-  {
-    name: "Redux",
-    logo: "/redux-logo.png",
-    url: "https://redux.js.org/",
-  },
-  {
-    name: "Figma",
-    logo: "/figma-logo.png",
-    url: "https://www.figma.com/",
-  },
-  {
-    name: "Node.js",
-    logo: "/nodejs-logo.png",
-    url: "https://nodejs.org/",
-  },
-];
+import { useSelector } from "react-redux";
 
 const Skills = () => {
+  const skills = useSelector((state) => state.skills.skills);
+
   return (
     <section id="skills" className="w-full py-20 font-playfair">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -51,7 +11,7 @@ const Skills = () => {
           Skills
         </h2>
         <div className="grid grid-cols-2 md:grid-cols-4 gap-10">
-          {skillsData.map((skill, index) => (
+          {skills.map((skill, index) => (
             <motion.a
               key={skill.name}
               href={skill.url}

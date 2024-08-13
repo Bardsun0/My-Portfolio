@@ -1,23 +1,9 @@
 import { motion } from "framer-motion";
-
-const socialLinks = [
-  {
-    name: "LinkedIn",
-    icon: "/LinkedIn.png",
-    url: "https://www.linkedin.com/in/ozan-g%C3%BCne%C5%9F-500097312/",
-    width: "31px",
-    height: "33.95px",
-  },
-  {
-    name: "GitHub",
-    icon: "/github.png",
-    url: "https://github.com/Bardsun0",
-    width: "34px",
-    height: "36.14px",
-  },
-];
+import { useSelector } from "react-redux";
 
 const SocialIcons = () => {
+  const socialLinks = useSelector((state) => state.footer.socialLinks);
+
   return (
     <div className="flex items-center space-x-4">
       {socialLinks.map((link, index) => (

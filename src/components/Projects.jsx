@@ -1,33 +1,9 @@
 import { motion } from "framer-motion";
-
-const projectsData = [
-  {
-    title: "E-commerce Platform",
-    image: "/project1.png",
-    description: "User-friendly online shopping experience",
-    url: "",
-  },
-  {
-    title: "Pizza Order Project",
-    image: "/project2.png",
-    description: "Clean and modern pizza order application design",
-    url: "https://bardsun-pizza-challenge.vercel.app/",
-  },
-  {
-    title: "Portfolio Website 2",
-    image: "/project3.png",
-    description: "Another portfolio design, showcasing creative work with style ",
-    url: "https://ozangunes.vercel.app/",
-  },
-  {
-    title: "React Grid",
-    image: "/project4.png",
-    description: "Problem solving with grid",
-    url: "",
-  },
-];
+import { useSelector } from "react-redux";
 
 const Projects = () => {
+  const projects = useSelector((state) => state.projects.projects);
+
   return (
     <section id="projects" className="w-full py-20 font-playfair">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -48,7 +24,7 @@ const Projects = () => {
             },
           }}
         >
-          {projectsData.map((project, index) => (
+          {projects.map((project, index) => (
             <motion.div
               key={index}
               className="bg-white rounded-lg shadow-md overflow-hidden"
