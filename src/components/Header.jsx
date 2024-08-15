@@ -1,5 +1,6 @@
 import { motion, useScroll, useTransform } from "framer-motion";
 import SocialIcons from "./SocialIcons";
+import ParticlesBackground from "./ParticlesBackground";
 
 const Header = () => {
   const { scrollY } = useScroll();
@@ -8,8 +9,10 @@ const Header = () => {
   return (
     <header
       id="header"
-      className="w-full font-inter text-shadow-custom overflow-hidden pt-20"
+      className="w-full font-inter text-shadow-custom overflow-hidden pt-20 relative"
+      style={{ height: "100vh" }}
     >
+      <ParticlesBackground />
       <motion.div
         className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 relative"
         style={{ y }}

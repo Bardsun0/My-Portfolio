@@ -7,5 +7,5 @@
 #header,
 #projects,
 #footerGradient {
-  background: linear-gradient(135deg, #0bc4d1 20%, #c3cfe2 60%);
+  background-image: url(/bg1.jpg);
 }
