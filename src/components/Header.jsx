@@ -12,6 +12,7 @@ const Header = () => {
       className="w-full font-inter text-shadow-custom overflow-hidden pt-20 relative"
       style={{ height: "100vh" }}
     >
+      <div className="absolute inset-0 dark:bg-primary dark:bg-opacity-70"></div>
       <ParticlesBackground />
       <motion.div
         className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 relative"
@@ -24,12 +25,12 @@ const Header = () => {
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.9, delay: 0.2 }}
           >
-            <p className="text-[36px] font-medium mb-10 text-primary">
+            <p className="text-[36px] font-medium mb-10 text-primary dark:text-white">
               Hi! 👋 <br /> I`m Ozan. I`m a frontend developer. I can craft
               solid and scalable frontend products. <br /> Let`s meet!
             </p>
             <SocialIcons />
-            <div className="text-xl leading-relaxed mt-4 font-normal text-primary">
+            <div className="text-xl leading-relaxed mt-4 font-normal text-primary dark:text-white">
               <p>
                 Currently{" "}
                 <span className="text-custom-darkpink">Freelancing</span> for{" "}

@@ -1,8 +1,11 @@
 import { motion } from "framer-motion";
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
+import { toggleDarkMode } from "../store/slicers/themeSlice";
 
 const Navbar = () => {
   const navItems = useSelector((state) => state.navbar.navItems);
+  const darkMode = useSelector((state) => state.theme.darkMode);
+  const dispatch = useDispatch();
 
   const scrollToSection = (sectionId) => {
     const section = document.getElementById(sectionId);
@@ -13,7 +16,7 @@ const Navbar = () => {
 
   return (
     <motion.nav
-      className="w-full h-20 fixed top-0 z-50 bg-white font-playfair"
+      className="w-full h-20 fixed top-0 z-50 bg-white font-playfair dark:bg-primary"
       initial={{ opacity: 0, y: -50 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.5 }}
@@ -34,7 +37,7 @@ const Navbar = () => {
               <motion.button
                 key={item.name}
                 onClick={() => scrollToSection(item.id)}
-                className="text-primary hover:text-accent transition duration-300"
+                className="text-primary hover:text-accent transition duration-300 dark:text-white dark:hover:text-accent"
                 whileHover={{ scale: 1.4 }}
                 whileTap={{ scale: 0.9 }}
                 initial={{ opacity: 0, y: -20 }}
@@ -44,6 +47,14 @@ const Navbar = () => {
                 {item.name}
               </motion.button>
             ))}
+            <motion.button
+              onClick={() => dispatch(toggleDarkMode())}
+              className="text-primary dark:text-white hover:text-accent transition duration-300"
+              whileHover={{ scale: 1.1 }}
+              whileTap={{ scale: 0.9 }}
+            >
+              {darkMode ? "🌞" : "🌙"}
+            </motion.button>
           </div>
         </div>
       </div>

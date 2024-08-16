@@ -5,9 +5,9 @@ const Skills = () => {
   const skills = useSelector((state) => state.skills.skills);
 
   return (
-    <section id="skills" className="w-full py-20 font-playfair">
+    <section id="skills" className="w-full py-20 font-playfair dark:bg-primary">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <h2 className="text-5xl font-bold text-center mb-16 text-primary">
+        <h2 className="text-5xl font-bold text-center mb-16 text-primary dark:text-white">
           Skills
         </h2>
         <div className="grid grid-cols-2 md:grid-cols-4 gap-10">
@@ -29,7 +29,7 @@ const Skills = () => {
                 alt={skill.name}
                 className="w-16 h-16 mb-4"
               />
-              <span className="text-xl font-semibold text-primary">
+              <span className="text-xl font-semibold text-primary dark:text-white">
                 {skill.name}
               </span>
             </motion.a>
