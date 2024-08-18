@@ -5,9 +5,10 @@ const Projects = () => {
   const projects = useSelector((state) => state.projects.projects);
 
   return (
-    <section id="projects" className="w-full py-20 font-playfair">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <h2 className="text-5xl font-bold text-center mb-16 text-primary">
+    <section id="projects" className="w-full py-20 font-playfair relative">
+      <div className="absolute inset-0 bg-primary bg-opacity-70 dark:block hidden"></div>
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <h2 className="text-5xl font-bold text-center mb-16 text-primary dark:text-white">
           Check out my Recent Projects 🎉
         </h2>
         <motion.div

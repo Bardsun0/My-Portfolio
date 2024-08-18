@@ -24,10 +24,12 @@ const Skills = () => {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
             >
-              <img
+              <motion.img
                 src={skill.logo}
                 alt={skill.name}
                 className="w-16 h-16 mb-4"
+                whileHover={{ rotate: 360 }}
+                transition={{ duration: 0.5 }}
               />
               <span className="text-xl font-semibold text-primary dark:text-white">
                 {skill.name}

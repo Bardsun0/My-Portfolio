@@ -26,7 +26,7 @@ const Footer = () => {
   };
 
   return (
-    <footer id="contact" className="w-full font-playfair text-white">
+    <footer id="contact" className="w-full font-playfair text-white dark:bg-primary">
       <motion.div
         className="py-16"
         initial={{ opacity: 0, y: 50 }}
@@ -35,10 +35,11 @@ const Footer = () => {
       >
         <div
           id="footerGradient"
-          className="max-w-7xl h-36 mx-auto -mt-16 flex flex-col justify-center items-center"
+          className="max-w-7xl h-36 mx-auto -mt-16 flex flex-col justify-center items-center relative"
         >
+          <div className="absolute inset-0 bg-primary bg-opacity-70 dark:block hidden"></div>
           <motion.h2
-            className="text-2xl font-bold text-center mb-4"
+            className="text-2xl font-bold text-center mb-4 relative z-10 dark:text-white"
             initial={{ opacity: 0, y: -20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.2 }}
