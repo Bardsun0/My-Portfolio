@@ -1,9 +1,18 @@
-import { useSelector } from "react-redux";
+import { useSelector, useDispatch } from "react-redux";
 import { useEffect } from "react";
+import { toggleDarkMode } from "./store/slicers/themeSlice";
 import Home from "./pages/Home";
 
 function App() {
   const darkMode = useSelector((state) => state.theme.darkMode);
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+    const savedDarkMode = localStorage.getItem("darkMode");
+    if (savedDarkMode !== null) {
+      dispatch(toggleDarkMode());
+    }
+  }, [dispatch]);
 
   useEffect(() => {
     if (darkMode) {
