@@ -53,6 +53,3 @@ This project is set up to be easily deployed on platforms like Vercel or Netlify
 
 For any inquiries or collaborations, feel free to reach out to me at ozangunes2894@gmail.com.
 
-## 📄 License
-
-This project is open source and available under the [MIT License](LICENSE).
