@@ -19,7 +19,7 @@ const initialState = {
       image: "/project3.png",
       description:
         "Another portfolio design, showcasing creative work with style ",
-      url: "https://ozangunes.vercel.app/",
+      url: "https://ozangunes1.vercel.app/",
     },
     {
       title: "React Grid",
